@@ -381,3 +381,100 @@ console.log(kristynsCloset)
 
 //-----------------------------------------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------------------------------------
+
+// IV. Functions
+
+//B. printCool
+// Write a function printCool that accepts one parameter, name as an argument. The function should print the name and a message saying that that person is cool.
+
+const printCool = (name) => {
+    console.log(name + ' is cool.')
+}
+
+printCool('Bill Murray')
+
+//-----------------------------------------------------------------------------------------------------------------
+
+// C. calculateCube
+// Write a function calculateCubethat takes a single number and prints the volume of a cube made from that number.
+
+const calculateCube = (num) => {
+    return num**3;
+}
+
+console.log(calculateCube(9))
+
+//-----------------------------------------------------------------------------------------------------------------
+
+// D. isVowel
+// Write a function isVowelthat takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise. The vowel could be upper or lower case. Test your function on every vowel and make sure it's working. In general, when you write functions, take a minute to test them with different values to make sure they behave the way you want.
+
+const isVowel = (letter) => {
+let up = letter.toUpperCase()
+    return up == 'A' || up == 'E' || up == 'I' || up == 'O' || up == 'U' || up == 'Y';
+}
+
+console.log(isVowel('x'))
+
+//-----------------------------------------------------------------------------------------------------------------
+
+// E. getTwoLengths
+// Write a function getTwoLengths that accepts two parameters (strings). The function should return an array of numbers where each number is the length of the corresponding string.
+
+const getTwoLengths = (s1, s2) => {
+    return [s1.length, s2.length]
+}
+
+console.log(getTwoLengths('dinosaur', 'frog'))
+
+//-----------------------------------------------------------------------------------------------------------------
+
+// F. getMultipleLengths
+// Write a function getMultipleLengths that accepts a single parameter as an argument: an array of strings. The function should return an array of numbers where each number is the length of the corresponding string.
+
+const getMultipleLengths = (strArray) => {
+    let wordLengths = [];
+    strArray.forEach((word) => {
+        wordLengths.push(word.length)
+    })
+    return wordLengths;
+}
+
+console.log(getMultipleLengths(['good', 'morning', 'everyone', 'how', 'is', 'everyone', 'doing?']))
+
+//-----------------------------------------------------------------------------------------------------------------
+
+// G. maxOfThree
+// Define a function maxOfThree that takes three numbers as arguments and returns the largest of them. If all numbers are the same, it doesn't matter which one is returned. If the two largest numbers are the same, one of them should be returned. Be sure to test it with larger values in each of the three locations.
+
+const maxOfThree = (num1, num2, num3) => {
+    if (num1 >= num2 && num1 >= num3) {
+        return num1;
+    } else if (num2 >= num1 && num2 >= num3) {
+        return num2;
+    } else {
+        return num3;
+    }
+}
+
+console.log(maxOfThree(420, 69, 420))
+
+//-----------------------------------------------------------------------------------------------------------------
+
+// H. printLongestWord
+// Write a function printLongestWord that accepts a single argument, an array of strings. The method should return the longest word in the array. In case of a tie, the method should return the word that appears first in the array.
+
+const printLongestWord = (strAr) => {
+let longestWord = '';
+strAr.forEach((word) => {
+    if (word.length > longestWord.length) {
+        longestWord = word;
+    }
+})
+return longestWord;
+}
+
+console.log(printLongestWord(['dog', 'dolphin', 'goose', 'stegosaurus', 'giraffe', 'seal']) + ' is the longest word.')
+
+//-----------------------------------------------------------------------------------------------------------------
+
