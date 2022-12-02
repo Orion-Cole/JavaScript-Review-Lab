@@ -352,7 +352,7 @@ const kristynsCloset = [
   ];
 
 // 1. What's Kristyn wearing today? Using bracket notation to access items in kristynsCloset, log the sentence "Kristyn is rocking that " + the third item in Kristyn's closet + " today!" to the console.
-console.log("Kristyn is rocking that " + kristynsCloset[2])
+console.log("Kristyn is rocking that " + kristynsCloset[2]);
 
 // 2. Kristyn just bought some sweet shades! Add "raybans" to her closet after "yellow knit hat".
 kristynsCloset.splice(6, 0, "raybans")
@@ -370,14 +370,14 @@ let pants = thomsCloset[1][1];
 let accessory = thomsCloset[2][1];
 
 // 7. Log a sentence about what Thom's wearing. Example: "Thom is looking fierce in a grey button-up, jeans and wool scarf!"
-console.log("Thom has donned a " + shirt + " and " + pants + " with a " + accessory + '.')
+console.log("Thom has donned a " + shirt + " and " + pants + " with a " + accessory + '.');
 
 // 8. Get more specific about what kind of PJs Thom's wearing this winter. Modify the name of his PJ pants to Footie Pajamas.
-thomsCloset[1].splice(2, 1, "footie pajamas")
+thomsCloset[1].splice(2, 1, "footie pajamas");
 
 
-console.log(thomsCloset)
-console.log(kristynsCloset)
+console.log(thomsCloset);
+console.log(kristynsCloset);
 
 //-----------------------------------------------------------------------------------------------------------------
 //-----------------------------------------------------------------------------------------------------------------
@@ -391,7 +391,7 @@ const printCool = (name) => {
     console.log(name + ' is cool.')
 }
 
-printCool('Bill Murray')
+printCool('Bill Murray');
 
 //-----------------------------------------------------------------------------------------------------------------
 
@@ -402,7 +402,7 @@ const calculateCube = (num) => {
     return num**3;
 }
 
-console.log(calculateCube(9))
+console.log(calculateCube(9));
 
 //-----------------------------------------------------------------------------------------------------------------
 
@@ -414,7 +414,7 @@ let up = letter.toUpperCase()
     return up == 'A' || up == 'E' || up == 'I' || up == 'O' || up == 'U' || up == 'Y';
 }
 
-console.log(isVowel('x'))
+console.log(isVowel('x'));
 
 //-----------------------------------------------------------------------------------------------------------------
 
@@ -425,7 +425,7 @@ const getTwoLengths = (s1, s2) => {
     return [s1.length, s2.length]
 }
 
-console.log(getTwoLengths('dinosaur', 'frog'))
+console.log(getTwoLengths('dinosaur', 'frog'));
 
 //-----------------------------------------------------------------------------------------------------------------
 
@@ -440,7 +440,7 @@ const getMultipleLengths = (strArray) => {
     return wordLengths;
 }
 
-console.log(getMultipleLengths(['good', 'morning', 'everyone', 'how', 'is', 'everyone', 'doing?']))
+console.log(getMultipleLengths(['good', 'morning', 'everyone', 'how', 'is', 'everyone', 'doing?']));
 
 //-----------------------------------------------------------------------------------------------------------------
 
@@ -457,7 +457,7 @@ const maxOfThree = (num1, num2, num3) => {
     }
 }
 
-console.log(maxOfThree(420, 69, 420))
+console.log(maxOfThree(420, 69, 420));
 
 //-----------------------------------------------------------------------------------------------------------------
 
@@ -478,3 +478,165 @@ console.log(printLongestWord(['dog', 'dolphin', 'goose', 'stegosaurus', 'giraffe
 
 //-----------------------------------------------------------------------------------------------------------------
 
+// Objects
+// Let's set up an object data structure. Let's say we have a website that sells products, and we have a user of our website, and we want to store that user's data. The object data structure is a good way to organize the data from our user.
+
+// A. Make a user object
+// 1. Create an object called user.
+// 2. Write in to the object the key-value pairs for name, email, age, and purchased. Set the value of purchasedto an empty array []. Set the other values to whatever you would like.
+
+const user = {name:'Arthur', email:'arthur_morgan56@yahoo.com', age:42, purchased:[]};
+
+//-----------------------------------------------------------------------------------------------------------------
+
+// B. Update the user
+// 1. Our user has changed his or her email address. Without changing the original userobject, update the emailvalue to a new email address.
+
+user.email = 'arthur_morgan56@gmail.com';
+
+// 2. Our user has had a birthday! Without changing the original userobject, increment the age value using the postfix operator. Hint: age++
+
+user.age++
+
+//-----------------------------------------------------------------------------------------------------------------
+
+// C. Adding keys and values
+// You have decided to add your user's location to the data that you want to collect.
+// Without changing the original userobject, add a new key location to the object, and give it a value or some-or-other location (a string).
+
+user.location = 'New Hanover';
+
+//-----------------------------------------------------------------------------------------------------------------
+
+// D. Shopaholic!
+// 1. Our user has purchased an item! They have purchased some "carbohydrates". Using .push(), add the string "carbohydrates" to the purchasedarray.
+user.purchased.push('carbohydrates')
+
+// 2. Our user has purchased an item! They have purchased some "peace of mind". Using .push(), add the string "peace of mind" to the purchasedarray.
+user.purchased.push('peace of mind')
+
+// 3. Our user has purchased an item! They have purchased some "Merino jodhpurs". Using .push(), add the string "Merino jodhpurs" to the purchasedarray.
+user.purchased.push('Merino jodhpurs')
+
+// 4. Console.log just the "Merino jodhpurs" from the purchasedarray.
+console.log(user.purchased[2]);
+
+//-----------------------------------------------------------------------------------------------------------------
+
+// E. Object-within-object
+
+// 1. Write a friendobject into your userobject and give the friend a name, age, location, and purchased array (empty for now)
+user.friend = {name:'Charles Smith', age:27, location:'New Hanover', purchased:[]};
+
+// 2. Console.log just the friend's name
+console.log(user.friend.name);
+
+// 3. Console.log just the friend's location
+console.log(user.friend.location);
+
+// 4. CHANGE the friend's age to 55
+user.friend.age = 55;
+
+// 5. The friendhas purchased "The One Ring". Use .push()to add "The One Ring" to the friend's purchased array.
+user.friend.purchased.push('The One Ring');
+
+// 6. The friend has purchased "A latte". Use .push()to add "A latte" to the friend's purchasedarray.
+user.friend.purchased.push('A latte');
+
+// 7. Console.log just "A latte" from the friend's purchasedarray.
+console.log(user.friend.purchased[1]);
+
+//-----------------------------------------------------------------------------------------------------------------
+
+// F. Loops
+// 1. Write a for loop that iterates over the User's purchasedarray (NOT the friend's purchased array), and prints each element to the console.
+for (let i=0;i<user.purchased.length;i++) {
+    console.log(user.purchased[i]);
+}
+
+// 2. Write a for loop that iterates over the Friend's purchasedarray, and prints each element to the console.
+for (let i=0;i<user.friend.purchased.length;i++) {
+    console.log(user.friend.purchased[i]);
+}
+
+//-----------------------------------------------------------------------------------------------------------------
+
+// G. Functions can operate on objects
+// 1. Write a single function updateUser that takes no parameters. When the function is run, it should:
+// 2. it should increment the user's age by 1
+// 3. make the user's name uppercase
+// The function does not need a return statement, it will merely modify the user object.
+console.log(user)
+const updateUser = () => {
+    user.age++;
+    user.name = user.name.toUpperCase();
+}
+updateUser()
+
+// 4. Write a function oldAndLoud that performs the exact same tasks as updateUser, but instead of hard-coding it to only work on our userobject, make it take a parameter person, and have it modify the object that is passed in as an argument when the function is called. Call your oldAndLoudfunction with useras the argument.
+const oldAndLoud = (person) => {
+    person.age++;
+    person.name = person.name.toUpperCase();
+}
+oldAndLoud(user)
+
+//-----------------------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------------
+
+// Cat Combinator
+// 1. Mama cat
+// Define an object called cat1 that contains the following properties:
+
+// name
+// breed
+// age (a number)
+// console.log the cat's age
+// console.log the cat's breed
+
+const cat1 = {name:'Georgina', breed:'Burmese', age:4};
+
+console.log(cat1.age, cat1.breed);
+
+
+// 2. Papa cat
+// Define an object called cat2that also contains the properties:
+
+// name
+// breed
+// age (a number)
+
+const cat2 = {name:'Whiskers', breed:'Abyssinian', age:5};
+
+
+// 3. Combine Cats!
+// The cats are multiplying!
+// Write a function combineCats that has two parameters mama, and papa. The function will take two arguments -- each a cat object.
+// Pass cat1 and cat2 as arguments to the combineCats function. The function should console.log them.
+
+// const combineCats = (mama, papa) => {
+// console.log(mama, papa);
+// }
+// combineCats(cat1, cat2)
+
+// Make it so the combineCats function will return a combination of the two incoming cats
+
+// The result should be an object wherein the
+
+// name is a concatenation of the parents' names
+// the age is 1
+// the breed is each of the parents' breeds with a hyphen in between
+
+const combineCats = (mama, papa) => {
+    let newCat = {};
+    newCat.name = mama.name.concat(papa.name);
+    newCat.breed = mama.breed.concat('-', papa.breed);
+    newCat.age = 1;
+    return newCat;
+}
+
+console.log(combineCats(cat1, cat2));
+
+// 4. Cat brain bender
+// Write a console.log that is three levels deep of combineCats. combineCats should have two arguments, each which are combineCats, each which have two arguments, each which are combineCats.
+
+console.log(combineCats(combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2)), combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2)))); //lol
